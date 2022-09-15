@@ -1,0 +1,274 @@
+/* Start Global Rules */
+
+:root{
+  --main-color: #10cab7;
+  --main-color-alt: #2c4755;;
+  --main-transition: 0.3s;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --section-background: #ececec;
+}
+
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /* Safari et Chrome */
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Cairo", sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* Small */
+@media(min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media(min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+
+/* Large */
+@media(min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+ul li{
+    list-style:none;
+}
+
+
+/* End Global Rules */
+
+/* Start Header */
+
+header .container{
+  height: 64px;
+  display: flex;
+  flex: wrap;
+  justify-content: space-between;
+  background-color: white;
+}
+
+header .container .logo{
+  width:  80px;
+  height: 30px;
+  align-self: center;
+}
+
+header .container ul{
+  display: flex;
+  align-self: center;
+  gap: 40px;
+}
+
+header .container i{
+  align-self: center;
+  font-size: 22px;
+  display: none;
+}
+
+
+
+header .container ul li{
+  font-size: 18px;
+  position: relative;
+}
+
+header .container ul li a{
+  color: var(--main-color-alt);
+}
+
+header .container ul li::before{
+  content:"";
+  width: 0%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+}
+
+header .container ul li:hover::before{
+  width: 100%;
+  background-color: var(--main-color);
+  transition: var(--main-transition);
+}
+
+.main-page{
+  position: relative;
+}
+
+.main-page-small{
+  width: 60%;
+  height: calc(100vh - 64px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #eee;
+}
+
+.main-page-small .list{
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+.main-page-small .list ul{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  margin-top: 20px;
+
+}
+
+.main-page-small .list ul li{
+  font-size: 20px;
+
+}
+.main-page-small .list ul li a {
+  font-size: 20px;
+  color: var(--main-color-alt);
+}
+
+.main-page-small{
+  display: none;
+}
+
+@media(max-width:768px){
+
+  header .container i{
+    display: block;
+  }
+  header .container ul{
+    display: none;
+  } 
+
+}
+/* Start Header */
+
+/* Start Main Page */
+.main-page{
+  height: calc(100vh - 64px);
+  background-repeat: no-repeat;
+  background-image: url(../images/mounta.jfif);
+  background-size: cover;
+}
+
+.main-page .container .content{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.main-page .container .content h2{
+  text-align: center;
+  color: var(--main-color);
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.main-page .container .content div{
+  color:var(--main-color-alt);
+}
+
+.displayed{
+  display: block;
+}
+
+/* End Main Page */
+
+
+
+/* Start Features */
+.features{
+  min-height: fit-content;
+  align-items: center;
+  background-color: #eee;
+}
+
+.features .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  gap:30px;
+  padding-top: 60px;
+  justify-items: center;
+}
+
+.features .container .box{
+  width:300px;
+  height: 250px;
+  text-align: center;
+}
+
+.features .container .box i{
+  font-size: 50px;
+  color: var(--main-color);
+  margin: 20px 0;
+}
+
+.features .container .box h3{
+  text-align: center;
+  color: var(--main-color-alt);
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.features .container .box .text{
+  text-align: center;
+  }
+
+.services .container{
+
+  position: relative;
+
+}
+
+.services .title h2{
+  margin-top: 50px;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 100px;
+  color: #eee;
+  opacity: 0.7;
+}
+
+.services .title p{
+  text-align: center;
+  margin-top: -25px;
+
+}
+/* End Features */
