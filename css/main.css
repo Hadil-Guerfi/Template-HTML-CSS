@@ -298,7 +298,9 @@ header .container ul li:hover::before{
 
 .serv-feature i{
   color: var(--main-color);
-}
+}  
+
+
 
 .serv-feature .blocs{
   display:grid;
