@@ -226,6 +226,7 @@ header .container ul li:hover::before{
   min-height: fit-content;
   align-items: center;
   background-color: #eee;
+  padding-bottom: 100px;
 }
 
 .features .container{
@@ -263,22 +264,22 @@ header .container ul li:hover::before{
 /* End Features */
 
 /* Start Services */
-.services .container{
+section .container{
   position: relative;
-  min-height: fit-content;
+  min-height: 100vh;
 
 }
 
-.services .title h2{
-  margin-top: 50px;
+section .container .title h2{
+  margin-top: 30px;
   margin-bottom: 0;
   text-align: center;
   font-size: 100px;
-  color: #eee;
+  color: rgb(211, 211, 211);
   opacity: 0.7;
 }
 
-.services .title p{
+section .container .title p{
   text-align: center;
   margin-top: -25px;
 }
@@ -289,23 +290,30 @@ header .container ul li:hover::before{
   gap:50px;
   align-items: center;
   position: relative;
-  margin-top: 70px;
+  margin-top: 150px;
 }
 
 .serv-feature h3{
   display: inline-block;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--main-color-alt);
+
 }
 
 .serv-feature i{
   color: var(--main-color);
+  font-size: 40px ;
 }  
 
-
+.serv-feature p{
+font-size: 16px;
+}
 
 .serv-feature .blocs{
   display:grid;
   grid-template-columns: 1fr 1fr ;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 200px 200px;
 
   grid-template-areas: "graphic" "web-des "
                         "ui bloc" "web-dev ";
@@ -343,50 +351,190 @@ margin-right: 40px;
   z-index: -1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media(max-width:768px){
 
-  .services .title h2{
-  font-size: 80px;
+  section .title h2{
+  font-size: 70px !important;
+
   }
 
   .features .container .box h3{
   font-size: 18px;
 }
-.services .title p{
-  margin-top: -20px;
+  section .title p{
+  margin-top: -19px !important;
 
 }
 
 .serv-img{
 display: none;
 }
+
+.serv-feature{
+display: block;
+margin-top: 80px;
+}
+.serv-feature .blocs{
+  display:grid;
+  grid-template-columns:300px ;
+  justify-content: center;
+}
+
+.serv-feature .bloc{
+text-align: center;
+
+}
+.serv-feature h3{
+  display:block;
+}
+
 }
 /* End Services */
+
+
+
+/* Start Protfolio */
+.projects{
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  gap: 40px;
+}
+
+.projects img{
+  width: 300px;
+  height: 300px;
+}
+
+.proj{
+  text-align: center;
+}
+.projects .proj p{
+  font-size: 16px;
+}
+.projects .proj h3{
+  font-size: 20px;
+  letter-spacing: 0px;
+  font-weight: 900;
+  color: var(--main-color-alt);
+
+}
+@media(max-width:768px){
+
+
+  section{
+    padding-bottom: 50px;
+
+  }
+
+    .projects{
+      margin-top: 80px;
+    }
+  
+  
+  
+  .projects img{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+
+/* End Protfolio */
+
+/* Start About */
+
+.about-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 150px;
+  gap: 50px;
+}
+
+.about-text{
+  width: 500px;
+}
+
+.about-text div{
+  font-size: 20px;
+font-weight: 700;
+line-height: 35px;
+color: var(--main-color-alt);
+position: relative;
+margin-bottom: 50px;
+margin-bottom: 40px;
+}
+
+.about-text p{
+  line-height: 27px;
+  color: rgb(84, 80, 80);
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.about-text div::before{
+  content: "";
+  background-color: var(--main-color);
+  width: 55%;
+  height: 3px;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  z-index:1;
+}
+
+.about-flex .about-img img{
+  width: 250px;
+  height: 280px;
+}
+
+.about-flex .about-img{
+  position: relative;
+  margin-right: 100px;
+  z-index: 1;
+}
+
+.about-flex .about-img::before{
+  content: "";
+  background-color: var(--main-color);
+  width: 60px;
+  height: 80%;
+  top: -25px;
+  position: absolute;
+  right: -25px;
+  z-index: -1;
+}
+
+.about-flex .about-img::after{
+  content: "";
+  background-color: var(--main-color);
+  width: 120px;
+  height: 20%;
+  bottom:25%;
+  position: absolute;
+  right:-100px;
+  z-index:-2;
+}
+
+
+@media(max-width:768px){
+  .about-flex{
+  margin-top: 80px;   
+  }
+  .about-text div{
+  font-size: 16px;
+  }
+
+  .about-flex .about-img {
+    margin-right: 0px;
+  }
+
+  .about-flex .about-img::after{
+    width: 0;
+  }
+
+}
+
+
+/* End About */
