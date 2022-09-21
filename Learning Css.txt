@@ -1,0 +1,9 @@
+-list ul => we should make margin:0 et padding:0
+
+-making a padding for header
+
+-
+
+-position:absolute
+ top;100% 
+ => 100% quoi ?

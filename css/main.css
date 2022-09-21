@@ -265,6 +265,7 @@ header .container ul li:hover::before{
 
 /* Start Services */
 section .container{
+
   position: relative;
   min-height: 100vh;
 
@@ -374,6 +375,7 @@ display: none;
 display: block;
 margin-top: 80px;
 }
+
 .serv-feature .blocs{
   display:grid;
   grid-template-columns:300px ;
@@ -407,7 +409,7 @@ text-align: center;
 }
 
 .proj{
-  text-align: center;
+  text-align:center;
 }
 .projects .proj p{
   font-size: 16px;
@@ -421,7 +423,6 @@ text-align: center;
 }
 @media(max-width:768px){
 
-
   section{
     padding-bottom: 50px;
 
@@ -430,8 +431,6 @@ text-align: center;
     .projects{
       margin-top: 80px;
     }
-  
-  
   
   .projects img{
     width: 250px;
@@ -457,7 +456,7 @@ text-align: center;
 }
 
 .about-text div{
-  font-size: 20px;
+font-size: 20px;
 font-weight: 700;
 line-height: 35px;
 color: var(--main-color-alt);
@@ -471,6 +470,7 @@ margin-bottom: 40px;
   color: rgb(84, 80, 80);
   font-size: 14px;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .about-text div::before{
@@ -538,3 +538,101 @@ margin-bottom: 40px;
 
 
 /* End About */
+
+/* Start Contact */
+
+.Contact{
+  min-height: fit-content;
+  padding-bottom: 0;
+}
+
+.Contact .container .title h2{
+  margin-top: 0;
+}
+
+.Contact .container{
+}
+
+.Contact .social-media p{
+  display: inline-block;
+}
+
+.contact-text{
+  margin-top: 150px;
+}
+
+
+.contact-text div{
+font-size: 60px;
+font-weight: 900;
+color: var(--main-color-alt);
+} 
+
+.contact-text p{
+  padding-left: 30px;
+  font-size: 50px;
+  font-weight: 800;
+  color:var(--main-color)
+  } 
+
+  .social-media{
+    padding-left: 80px;
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .social-media .icons{
+   
+  }
+
+  .social-media i{
+    font-size: 40px;
+    margin-left: 10px;
+ 
+  }
+
+  .foot{
+    background-color: var(--main-color-alt);
+    text-align: center;
+    height: 80px;
+  }
+
+.foot p{
+  color: white;
+  display: inline-block;
+}
+
+  .foot p:nth-child(2){
+    color: var(--main-color);
+  }
+
+  @media(max-width:768px){
+   
+    .contact-content{
+      margin-top: -80px;
+      margin-bottom: 100px;
+
+    }
+
+    .foot{
+    }
+
+    .contact-text div{
+      font-size: 28px;
+      
+      } 
+
+    .contact-text p{
+    font-size: 25px;
+    padding: 0;
+    }
+
+    .social-media{
+      padding-left: 10px;
+    }
+
+    .Contact .container{
+      min-height: fit-content;
+    }
+  }
